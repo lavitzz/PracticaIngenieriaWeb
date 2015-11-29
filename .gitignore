@@ -1,0 +1,24 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/JustEat/nbproject/private/
+/JustEat/JustEat-war/nbproject/private/
+/JustEat/JustEat-ejb/nbproject/private/
+/JustEat/JustEat-ejb/build/
+/JustEat/build/
+/JustEat/JustEat-war/build/
+/JustEat/JustEat-ejb/dist/
+/JustEat/dist/
+/JustEat/JustEat-war/dist/
+/JustEatCliente/nbproject/private/
+/JustEatCliente/build/
+/JustEatCliente/dist/
