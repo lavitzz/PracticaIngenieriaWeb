@@ -31,6 +31,15 @@
                     #{menu.precio}
                 </p:column>
                 <p:column>
+                    <h:selectOneMenu value="#{pedidoBean.cantidadSeleccionada}">
+                        <f:selectItem itemValue="1" itemLabel="1 Menú" />
+                        <f:selectItem itemValue="2" itemLabel="2 Menús" />
+                        <f:selectItem itemValue="3" itemLabel="3 Menú2" />
+                        <f:selectItem itemValue="4" itemLabel="4 Menú2" />
+                        <f:selectItem itemValue="5" itemLabel="5 Menú2" />
+                    </h:selectOneMenu>
+                </p:column>
+                <p:column>
                     <p:commandButton value="Añadir al Pedido" action="#{pedidoBean.doAddPedido()}">
                         <f:setPropertyActionListener value="#{menu}" target="#{pedidoBean.menuSeleccionado}"/>
                     </p:commandButton>

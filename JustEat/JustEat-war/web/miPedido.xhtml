@@ -34,7 +34,7 @@
                     <f:facet name="header">
                         Precio
                     </f:facet>
-                    #{pedido.idMenu.precio}
+                    #{pedido.idMenu.precio * pedido.cantidadmenu}
                 </p:column>
                 <p:column>
                     <p:commandButton value="Eliminar Menu" action="#{pedidoBean.doEliminarPedido()}">

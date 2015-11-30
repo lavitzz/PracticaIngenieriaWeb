@@ -37,7 +37,7 @@ public class PedidoBean {
     private Pedido pedido;
     private List<Pedido> pedidos = new ArrayList<Pedido>();
     private Pedido pedidoSeleccionado;
-    private String cantidadSeleccionada;
+    private String cantidadSeleccionada = "";
     
     /**
      * Creates a new instance of PedidoBean
@@ -94,21 +94,24 @@ public class PedidoBean {
     }
 
     public String doAddPedido(){
-        Pedido p = new Pedido();
+        pedido = new Pedido();
         
-        p.setCif(menuSeleccionado.getCif());
-        p.setDni(loginBean.getUser());
-        p.setIdMenu(menuSeleccionado);
-        p.setCantidadmenu(1);
-        p.setPagado(0);
+        pedido.setCif(menuSeleccionado.getCif());
+        pedido.setDni(loginBean.getUser());
+        pedido.setIdMenu(menuSeleccionado);
+        pedido.setCantidadmenu(Integer.parseInt(cantidadSeleccionada));
+        pedido.setPagado(0);
         
-        pedidos.add(p);
+        boolean ok = pedidos.add(pedido);
         
         return "VistaMenus.xhtml";
     }
     
     public void doEliminarPedido(){
-        
+        int i = pedidos.indexOf(pedidoSeleccionado);
+        if (i!=-1){
+            pedidos.remove(i);
+        }
     }
     
     public void doPagar(){
